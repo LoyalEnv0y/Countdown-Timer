@@ -7,9 +7,10 @@ const secondsEl = document.querySelector("#seconds");
 const targetDate = '19 Nov 2021 10:00';
 
 /**
- * converts targetDate to a date and creates a new date with the device's current time. Calculates the difference 
- * 
- * @returns if the target time has been reached and sets counters to 00 
+ * converts targetDate to a date and creates a new date with the device's current time. Calculates the difference in seconds.
+ * sets counters to 00 and 0 and returns if the target date has been reached.
+ * calculates the days, hours, minutes and seconds.
+ * finally sets the formatted versions of the time units as innerHTML of the counters
  */
 function countDown() {
     const targetDateMS = new Date(targetDate);
@@ -36,6 +37,10 @@ function countDown() {
     secondsEl.innerHTML = formatTime(seconds);
 }
 
+/**
+ * @param {NUMBER} time is the given time unit 
+ * @returns a 0 cleaned version if the time is less then 10.
+ */
 function formatTime(time) {
     return time < 10 ? (`0${time}`) : time;
 }
