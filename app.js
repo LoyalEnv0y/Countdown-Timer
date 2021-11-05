@@ -4,7 +4,7 @@ const minEl = document.querySelector("#minutes");
 const secondsEl = document.querySelector("#seconds");
 
 // The target day for the countdown to count to.
-const targetDate = '19 Nov 2021 10:00';
+const targetDate = '12 Nov 2021 11:00';
 
 /**
  * converts targetDate to a date and creates a new date with the device's current time. Calculates the difference in seconds.
